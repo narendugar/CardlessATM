@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Cardless ATM</string>
+    <string name="banking_menu_title">ATM Banking Menu</string>
 </resources>
