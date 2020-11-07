@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".BankingMenuActivity"/>
         <activity android:name=".AmountWithdrawal"/>
+        <activity android:name=".SuccessScreen"/>
     </application>
 
 </manifest>

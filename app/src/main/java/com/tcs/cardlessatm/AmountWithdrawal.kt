@@ -1,5 +1,6 @@
 package com.tcs.cardlessatm
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
@@ -28,7 +29,8 @@ class AmountWithdrawal: AppCompatActivity() {
 
         val submitButton = findViewById<Button>(R.id.btn_submit)
         submitButton.setOnClickListener {
-
+            intent = Intent(this, SuccessScreen::class.java)
+            startActivity(intent)
         }
     }
 }
