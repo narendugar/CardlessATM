@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MenuItemAdapter(val menuItemList: ArrayList<MenuItem>): RecyclerView.Adapter<MenuItemAdapter.ItemHolder>() {
+class MenuItemAdapter(private val menuItemList: ArrayList<MenuItem>, val itemClickListener: OnItemClickListener): RecyclerView.Adapter<MenuItemAdapter.ItemHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuItemAdapter.ItemHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false)
@@ -15,25 +15,29 @@ class MenuItemAdapter(val menuItemList: ArrayList<MenuItem>): RecyclerView.Adapt
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-        holder.bindItems(menuItemList[position])
+        holder.bindItems(menuItemList[position], itemClickListener)
     }
 
     override fun getItemCount(): Int {
         return menuItemList.size
     }
 
-    class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindItems(menuItem: MenuItem) {
+        fun bindItems(menuItem: MenuItem, clickListener: OnItemClickListener) {
             val menuIcon = itemView.findViewById(R.id.menu_icon) as ImageView
             val menuText  = itemView.findViewById(R.id.menu_text) as TextView
             menuIcon.setImageResource(menuItem.icon)
             menuText.text = menuItem.name
-        }
 
-        override fun onClick(v: View?) {
-            TODO("Not yet implemented")
+            itemView.setOnClickListener {
+                clickListener.onItemClick(menuItem)
+            }
         }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(menuItem: MenuItem)
     }
 
 }
