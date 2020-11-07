@@ -15,35 +15,37 @@
         android:layout_marginBottom="24dp"
         android:src="@drawable/ic_banking" />
 
-        <!-- Email Label -->
+        <!-- Username Label -->
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="@android:color/white">
-            <EditText android:id="@+id/input_email"
+            android:layout_marginEnd="20dp">
+
+            <EditText android:id="@+id/input_username"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:inputType="textEmailAddress"
-                android:hint="Email" />
+                android:background="?attr/colorOnPrimary"
+                android:hint="Username" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password Label -->
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="@android:color/white">
+            android:layout_marginEnd="20dp">
+
             <EditText android:id="@+id/input_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:inputType="textPassword"
+                android:background="?attr/colorOnPrimary"
                 android:hint="Password"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,7 +57,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="24dp"
-            android:padding="12dp"
             android:background="@drawable/button_shape"
+            android:textColor="?attr/colorPrimary"
             android:text="Login"/>
 </LinearLayout>

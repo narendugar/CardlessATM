@@ -1,5 +1,6 @@
 package com.tcs.cardlessatm
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +8,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class BankingMenuActivity: AppCompatActivity() {
+class BankingMenuActivity: AppCompatActivity(), MenuItemAdapter.OnItemClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +30,29 @@ class BankingMenuActivity: AppCompatActivity() {
         menuItemList.add(MenuItem(R.drawable.ic_atm_deposit, "Amount Deposit"))
         menuItemList.add(MenuItem(R.drawable.ic_send_money, "Transfer"))
 
-        val adapter = MenuItemAdapter(menuItemList)
+        val adapter = MenuItemAdapter(menuItemList, this)
         menuRecyclerView.adapter = adapter
+    }
+
+    override fun onItemClick(menuItem: MenuItem) {
+        val intent: Intent
+        when(menuItem.name) {
+            "Amount Withdraw" -> {
+                intent = Intent(this, AmountWithdrawal::class.java)
+                startActivity(intent)
+            }
+            "Balance Enquiry" -> {
+                intent = Intent(this, AmountWithdrawal::class.java)
+                startActivity(intent)
+            }
+            "Amount Deposit" -> {
+                intent = Intent(this, AmountWithdrawal::class.java)
+                startActivity(intent)
+            }
+            "Transfer" -> {
+                intent = Intent(this, AmountWithdrawal::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }
