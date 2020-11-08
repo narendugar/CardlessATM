@@ -21,6 +21,8 @@
         <activity android:name=".AmountWithdrawal"/>
         <activity android:name=".SuccessScreen"/>
         <activity android:name=".AmountDepositActivity"/>
+        <activity android:name=".BalanceEnquiry"/>
+        <activity android:name=".TransferAmountActivity"/>
     </application>
 
 </manifest>
