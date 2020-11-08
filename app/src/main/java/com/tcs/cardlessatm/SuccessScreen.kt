@@ -17,8 +17,21 @@ class SuccessScreen : AppCompatActivity() {
         val toolbarTitle = toolbar.findViewById<TextView>(R.id.toolbar_title)
         toolbarTitle.text = resources.getString(R.string.success_screen_title)
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false);
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
+
+
+        val successMsg = findViewById<TextView>(R.id.success_msg)
+        val screenName = intent.getStringExtra("screen")
+        if(screenName.equals("Deposit Screen")) {
+            successMsg.text = resources.getString(R.string.deposit_success_message)
+        } else if(screenName.equals("Withdrawal Screen")) {
+            successMsg.text = resources.getString(R.string.withdrawal_success_message)
+        } else if(screenName.equals("Transfer Screen")) {
+
+        } else if(screenName.equals("Balance Enquiry Screen")) {
+
+        }
         val submitButton = findViewById<Button>(R.id.btn_end)
         submitButton.setOnClickListener {
             intent = Intent(this, BankingMenuActivity::class.java)

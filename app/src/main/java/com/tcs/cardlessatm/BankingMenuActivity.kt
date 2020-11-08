@@ -46,7 +46,7 @@ class BankingMenuActivity: AppCompatActivity(), MenuItemAdapter.OnItemClickListe
                 startActivity(intent)
             }
             "Amount Deposit" -> {
-                intent = Intent(this, AmountWithdrawal::class.java)
+                intent = Intent(this, AmountDepositActivity::class.java)
                 startActivity(intent)
             }
             "Transfer" -> {

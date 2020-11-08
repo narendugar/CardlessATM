@@ -3,10 +3,12 @@
     <string name="banking_menu_title">ATM Banking Menu</string>
     <string name="amount_withdrawal_title">Amount Withdrawal</string>
     <string name="success_screen_title">Success</string>
-    <string name="amount_withdrawal_text">Please enter your amount to withdraw</string>
+    <string name="amount_withdrawal_text">Please enter amount to withdraw</string>
+    <string name="amount_deposit_text">Please enter amount to deposit</string>
     <string name="enter_amount_text">Enter Amount</string>
     <string name="submit_text">Submit</string>
     <string name="select_account_text">Select Account</string>
-    <string name="success_message">Withdrawal is Successful.</string>
+    <string name="withdrawal_success_message">Withdrawal is Successful.</string>
+    <string name="deposit_success_message">Deposit is Successful.</string>
     <string name="End_Transaction">End Transaction >></string>
 </resources>
