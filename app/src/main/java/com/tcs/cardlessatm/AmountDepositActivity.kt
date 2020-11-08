@@ -18,7 +18,7 @@ class AmountDepositActivity : AppCompatActivity() {
 
         val toolbar = findViewById<Toolbar>(R.id.tool_bar)
         val toolbarTitle = toolbar.findViewById<TextView>(R.id.toolbar_title)
-        toolbarTitle.text = resources.getString(R.string.amount_withdrawal_title)
+        toolbarTitle.text = "Deposit Amount"
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false);
 

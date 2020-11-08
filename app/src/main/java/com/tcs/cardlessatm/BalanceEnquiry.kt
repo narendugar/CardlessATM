@@ -17,7 +17,7 @@ class BalanceEnquiry : AppCompatActivity() {
 
         val toolbar = findViewById<Toolbar>(R.id.tool_bar)
         val toolbarTitle = toolbar.findViewById<TextView>(R.id.toolbar_title)
-        toolbarTitle.text = resources.getString(R.string.success_screen_title)
+        toolbarTitle.text = "Balance Enquiry"
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
