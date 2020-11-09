@@ -42,15 +42,15 @@ class BankingMenuActivity: AppCompatActivity(), MenuItemAdapter.OnItemClickListe
                 startActivity(intent)
             }
             "Balance Enquiry" -> {
-                intent = Intent(this, AmountWithdrawal::class.java)
+                intent = Intent(this, BalanceEnquiry::class.java)
                 startActivity(intent)
             }
             "Amount Deposit" -> {
-                intent = Intent(this, AmountWithdrawal::class.java)
+                intent = Intent(this, AmountDepositActivity::class.java)
                 startActivity(intent)
             }
             "Transfer" -> {
-                intent = Intent(this, AmountWithdrawal::class.java)
+                intent = Intent(this, TransferAmountActivity::class.java)
                 startActivity(intent)
             }
         }

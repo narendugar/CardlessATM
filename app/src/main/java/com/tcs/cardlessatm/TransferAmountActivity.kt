@@ -10,20 +10,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.textfield.TextInputLayout
 
-class AmountWithdrawal: AppCompatActivity() {
+class TransferAmountActivity : AppCompatActivity()  {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_amount_withdrawal_layout)
+        setContentView(R.layout.activity_amount_transfer_layout)
 
         val toolbar = findViewById<Toolbar>(R.id.tool_bar)
         val toolbarTitle = toolbar.findViewById<TextView>(R.id.toolbar_title)
-        toolbarTitle.text = resources.getString(R.string.amount_withdrawal_title)
+        toolbarTitle.text = "Transfer Amount"
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false);
 
-        val textField = findViewById<TextInputLayout>(R.id.account_types)
-        val items = listOf("Checking", "Savings")
+        val textField = findViewById<TextInputLayout>(R.id.beneficiary_list)
+        val items = listOf("Robert - 2345", "James - 3452", "Thomas - 3474", "Anthony - 5434")
         val adapter = ArrayAdapter(this, R.layout.account_type_item, items)
         (textField.editText as? AutoCompleteTextView)?.setAdapter(adapter)
 
@@ -31,7 +31,7 @@ class AmountWithdrawal: AppCompatActivity() {
         submitButton.setOnClickListener {
 
             intent = Intent(this, SuccessScreen::class.java)
-            intent.putExtra("screen", "Withdrawal Screen")
+            intent.putExtra("screen", "Transfer Screen")
             startActivity(intent)
         }
     }

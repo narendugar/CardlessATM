@@ -10,15 +10,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.textfield.TextInputLayout
 
-class AmountWithdrawal: AppCompatActivity() {
+class AmountDepositActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_amount_withdrawal_layout)
+        setContentView(R.layout.activity_amount_deposit_layout)
 
         val toolbar = findViewById<Toolbar>(R.id.tool_bar)
         val toolbarTitle = toolbar.findViewById<TextView>(R.id.toolbar_title)
-        toolbarTitle.text = resources.getString(R.string.amount_withdrawal_title)
+        toolbarTitle.text = "Deposit Amount"
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false);
 
@@ -31,7 +31,7 @@ class AmountWithdrawal: AppCompatActivity() {
         submitButton.setOnClickListener {
 
             intent = Intent(this, SuccessScreen::class.java)
-            intent.putExtra("screen", "Withdrawal Screen")
+            intent.putExtra("screen", "Deposit Screen")
             startActivity(intent)
         }
     }
