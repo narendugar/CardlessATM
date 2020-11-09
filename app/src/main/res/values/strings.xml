@@ -9,8 +9,9 @@
     <string name="enter_amount_text">Enter Amount</string>
     <string name="submit_text">Submit</string>
     <string name="select_account_text">Select Account</string>
-    <string name="withdrawal_success_message">Withdrawal is Successful.</string>
+    <string name="withdrawal_success_message">Please collect cash from atm.</string>
     <string name="transfer_success_message">Transfer amount was Successful.</string>
-    <string name="deposit_success_message">Deposit is Successful.</string>
-    <string name="End_Transaction">End Transaction >></string>
+    <string name="deposit_success_message">Please deposit your cash at atm.</string>
+    <string name="End_Transaction">End Transaction</string>
+    <string name="thank_you_banking">Thank you for Banking with us.</string>
 </resources>

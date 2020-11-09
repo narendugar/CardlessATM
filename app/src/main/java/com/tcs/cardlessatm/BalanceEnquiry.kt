@@ -27,9 +27,10 @@ class BalanceEnquiry : AppCompatActivity() {
         date_time.text = currentDate
         val submitButton = findViewById<Button>(R.id.btn_end)
         submitButton.setOnClickListener {
-            intent = Intent(this, BankingMenuActivity::class.java)
+            intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)
+            finish()
         }
     }
 }
